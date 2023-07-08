@@ -91,3 +91,75 @@ console.log(usuario8.Saludo());
     JavaScript, siendo la principal diferencia entre ellas la sintaxis más limpia y legible y la creacion de metodos,
     por parte de las clases.
 */
+
+
+
+// Limpiamos la consola de todo el texto impreso antes de ejecutar esta linea.
+console.clear();
+
+
+// ***** EJERCICIO *****
+// Crea un formulario basico que solicite nombre, apellido y edad, tambien debe contar con un boton(basico) 
+// para registrar. Crea una funcion que obtenga los datos del formulario y cree nuevas instancias 
+// de una clase llamada Usuarios y las aloje en un array llamado instancias.
+
+// Tambien crea un boton que permita ver los usuarios registrados en la pagina web.
+
+
+//La clase usuario genera un array de objetos, y estos objetos seran los usuarios registrados.
+
+
+// Pasos:
+
+// Crear una clase llamada Usuarios (listo)
+// Crear una funcion para capturar los datos de un formulario (usando selectores). (listo)
+// Definir en esta misma funcion que se desea instanciar una clase llamada Usuarios. (listo)
+// Anexar cada instancia creada a un array llamado instancias.
+// Seleccionar los botones.
+// Añadir la escucha de un evento especifico a los botones.
+// Crear una Funcion que permita revelar los usuarios registrados, en el DOM.
+
+
+
+
+class Usuario{
+    constructor(nombreUsuario,apellidoUsuario,edadUsuario){
+        this.nombre = nombreUsuario;
+        this.apellido = apellidoUsuario;
+        this.edad = edadUsuario;
+    }
+};
+
+let instancias = [];
+
+function registro(){
+    let nombre = document.getElementById("nombre");
+    let apellido = document.getElementById("apellido");
+    let edad = document.getElementById("edad");
+
+    // Creamos una nueva instancia con los valores capturados de los inputs.
+    let nuevaInstancia = new Usuario(nombre.value, apellido.value, edad.value);
+
+    // Añadimos la nueva instancia(objeto) al array de instancias.
+    instancias.push(nuevaInstancia);
+
+    // Mostramos en la consola la nueva instancia creada.
+    console.log(nuevaInstancia);
+
+    // Mostramos el array de instancias
+    console.log(instancias);
+};
+
+function revelar(){
+    let contenedorDeRegistros = document.getElementById("registros");
+    contenedorDeRegistros.innerHTML = "<p>Usuarios registrados</p>";
+}
+
+// Seleccionamos los botones
+let botonEnviar = document.getElementById("enviar");
+let botonVerRegistros = document.getElementById("verRegistros");
+
+
+// Asignamos la escucha de un evento especifico a cada boton.
+botonEnviar.addEventListener("click", registro);
+botonVerRegistros.addEventListener("click", revelar);
