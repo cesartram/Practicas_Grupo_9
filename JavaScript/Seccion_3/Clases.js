@@ -111,13 +111,13 @@ console.clear();
 
 // Pasos:
 
-// Crear una clase llamada Usuarios (listo)
+// Crear una clase llamada Usuarios. (listo)
 // Crear una funcion para capturar los datos de un formulario (usando selectores). (listo)
 // Definir en esta misma funcion que se desea instanciar una clase llamada Usuarios. (listo)
 // Anexar cada instancia creada a un array llamado instancias.
 // Seleccionar los botones.
-// Añadir la escucha de un evento especifico a los botones.
 // Crear una Funcion que permita revelar los usuarios registrados, en el DOM.
+// Añadir la escucha de un evento especifico a los botones.
 
 
 
@@ -143,6 +143,11 @@ function registro(){
     // Añadimos la nueva instancia(objeto) al array de instancias.
     instancias.push(nuevaInstancia);
 
+    // Limpiamos los inputs
+    nombre.value = "";
+    apellido.value = "";
+    edad.value = "";
+
     // Mostramos en la consola la nueva instancia creada.
     console.log(nuevaInstancia);
 
@@ -153,7 +158,39 @@ function registro(){
 function revelar(){
     let contenedorDeRegistros = document.getElementById("registros");
     contenedorDeRegistros.innerHTML = "<p>Usuarios registrados</p>";
-}
+    // Este contados lo utilizamos para llevar un control provicional (a falta de id)
+    let contador = 1;
+
+    // Iteramos el array de instancias.
+
+    // Alternativa 1 (Usando for in):
+    // for(let usuario in instancias){
+    //     // Creamos un nuevo elemento de tipo p / parrafo, para cada usuario.
+    //     let nuevoParrafo = document.createElement("p");
+
+    //     // Llenamos cada parrafo con la informacion del usuario en el indice actual de la iteracion.
+    //     nuevoParrafo.innerText = `ID: ${contador} | Nombre: ${instancias[usuario].nombre} | Apellido: ${instancias[usuario].apellido} | Edad: ${instancias[usuario].edad}`
+
+    //     // Incrementamos el contador para que concuerde con el siguiente id.
+    //     contador++;
+
+    //     console.log(instancias[usuario].nombre);
+
+    //     // Anexamos el parrafo al contenedor con appendChild.
+    //     contenedorDeRegistros.appendChild(nuevoParrafo);
+    // }
+
+
+    // Alternativa 2 (Usando map):
+    instancias.map(
+        function(instancia){
+        // Llenamos el div con todos los usuarios registrados:
+        contenedorDeRegistros.innerHTML += `<p>ID: ${contador} | Nombre: ${instancia.nombre} | Apellido: ${instancia.apellido} | Edad: ${instancia.edad}</p>`;
+
+        // Incrementamos el contador para que concuerde con el siguiente id.
+        contador++;
+    });
+};
 
 // Seleccionamos los botones
 let botonEnviar = document.getElementById("enviar");
@@ -163,3 +200,9 @@ let botonVerRegistros = document.getElementById("verRegistros");
 // Asignamos la escucha de un evento especifico a cada boton.
 botonEnviar.addEventListener("click", registro);
 botonVerRegistros.addEventListener("click", revelar);
+
+
+
+// Ejercicio para realizar el miercoles 12/07/23
+
+// To-Do List
