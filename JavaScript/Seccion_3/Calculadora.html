@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Calculadora</title>
+    </head>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0px;
+            top: 0px;
+            margin: 0px;
+        }
+    </style>
+
+    <body class="flex justify-center items-center w-full h-[100vh] bg-gradient-to-br from-yellow-400 to-yellow-900">
+        <div class="flex flex-col items-center rounded-md bg-yellow-500 rounded-md">
+            
+            <!-- Pantalla -->
+            <div class="flex flex-col bg-black/25 justify-center shadow-inner shadow-yellow-900 rounded w-[90%] mt-4 pr-1">
+                <span class="text-end text-3xl font-semibold text-yellow-950/70">0</span>
+                <input type="text" class="bg-transparent text-end border-0 outline-0 text-3xl font-semibold text-yellow-950 placeholder:text-yellow-950" placeholder="0">
+            </div>
+
+            <!-- Botoneras -->
+            <section class="flex py-5 pr-10 pl-5">
+                <!-- Izquierda -->
+                <div class="flex flex-wrap w-[300px] gap-4">
+                    <buttton id="limpiar" class="bg-yellow-900 shadow-inner shadow-black/40 rounded-sm hover:drop-shadow-lg p-8 font-bold text-2xl text-yellow-200">C</buttton>
+                    <buttton id="retroceder" class="bg-yellow-900 shadow-inner shadow-black/40 rounded-sm hover:drop-shadow-lg py-8 px-4 font-bold text-2xl text-yellow-200">DEL</buttton>
+                    <buttton id="dividir" class="bg-yellow-900 shadow-inner shadow-black/40 rounded-sm hover:drop-shadow-lg p-8 font-bold text-2xl text-yellow-200">÷</buttton>
+                    <buttton id="boton7" class="bg-yellow-900 shadow-inner shadow-black/40 rounded-sm hover:drop-shadow-lg p-8 font-bold text-2xl text-yellow-200">7</buttton>
+                    <buttton id="boton8" class="bg-yellow-900 shadow-inner shadow-black/40 rounded-sm hover:drop-shadow-lg p-8 font-bold text-2xl text-yellow-200">8</buttton>
+                    <buttton id="boton9" class="bg-yellow-900 shadow-inner shadow-black/40 rounded-sm hover:drop-shadow-lg p-8 font-bold text-2xl text-yellow-200">9</buttton>
+                    <buttton id="boton4" class="bg-yellow-900 shadow-inner shadow-black/40 rounded-sm hover:drop-shadow-lg p-8 font-bold text-2xl text-yellow-200">4</buttton>
+                    <buttton id="boton5" class="bg-yellow-900 shadow-inner shadow-black/40 rounded-sm hover:drop-shadow-lg p-8 font-bold text-2xl text-yellow-200">5</buttton>
+                    <buttton id="boton6" class="bg-yellow-900 shadow-inner shadow-black/40 rounded-sm hover:drop-shadow-lg p-8 font-bold text-2xl text-yellow-200">6</buttton>
+                    <buttton id="boton1" class="bg-yellow-900 shadow-inner shadow-black/40 rounded-sm hover:drop-shadow-lg p-8 font-bold text-2xl text-yellow-200">1</buttton>
+                    <buttton id="boton2" class="bg-yellow-900 shadow-inner shadow-black/40 rounded-sm hover:drop-shadow-lg p-8 font-bold text-2xl text-yellow-200">2</buttton>
+                    <buttton id="boton3" class="bg-yellow-900 shadow-inner shadow-black/40 rounded-sm hover:drop-shadow-lg p-8 font-bold text-2xl text-yellow-200">3</buttton>
+                    <buttton id="boton0" class="bg-yellow-900 shadow-inner shadow-black/40 rounded-sm hover:drop-shadow-lg py-8 px-20 font-bold text-2xl text-yellow-200">0</buttton>
+                    <buttton id="punto" class="bg-yellow-900 shadow-inner shadow-black/40 rounded-sm hover:drop-shadow-lg py-8 px-9 font-bold text-2xl text-yellow-200">.</buttton>
+                </div>
+                
+                <!-- Derecha -->
+                <div class="flex flex-wrap w-[50px] gap-4 ml-[-17px]">
+                    <button id="multiplicar" class="bg-yellow-900 shadow-inner shadow-black/40 rounded-sm hover:drop-shadow-lg p-8 font-bold text2xl text-yellow-200">x</button>
+                    <button id="restar" class="bg-yellow-900 shadow-inner shadow-black/40 rounded-sm hover:drop-shadow-lg p-8 font-bold text2xl text-yellow-200">-</button>
+                    <button id="sumar" class="bg-yellow-900 shadow-inner shadow-black/40 rounded-sm hover:drop-shadow-lg p-8 font-bold text2xl text-yellow-200">+</button>
+                    <button id="igual" class="bg-yellow-900 shadow-inner shadow-black/40 rounded-sm hover:drop-shadow-lg px-8 py-[88px] font-bold text2xl text-yellow-200">=</button>
+                </div>
+            </section>
+        </div>
+    </body>
+    <script src="./Practica_Calculadora.js"></script>
+</html>
