@@ -15,8 +15,16 @@ let tituloDeListaTareas = document.getElementById("tituloDeListaTareas");
 function actualizarTituloLista(){
     // Actualizamos nuevamente el valor del elemento de la lista de tareas.
     let listaTareas = document.getElementById("listaTareas");
-    // validamos si la lista de tareas tiene tareas añadidas
+    
+    // validamos si la lista de tareas tiene tareas añadidas.
+    // Para esto existen al menos 2 maneras de hacerlo.
+
+    // Metodo 1: usando childElementCount, que retorna el número de elementos hijos de un elemento padre.
     if( listaTareas.childElementCount == 1 ){ tituloDeListaTareas.innerText = "Sin Tareas" }
+    
+    // Metodo 2: usando children que retorna un array de elementos hijos de un elemento padre.
+    // Tambien se usa el metodo length para obtener el tamaño del array de elementos hijos.
+    // if( listaTareas.children.length == 1 ){ tituloDeListaTareas.innerText = "Sin Tareas" }
 };
 actualizarTituloLista();
 
