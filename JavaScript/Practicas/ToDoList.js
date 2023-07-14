@@ -7,69 +7,81 @@
 let botonAgregar = document.getElementById("botonAgregar");
 let listaTareas = document.getElementById("listaTareas");
 let inputTarea = document.getElementById("inputTarea");
+let tituloDeListaTareas = document.getElementById("tituloDeListaTareas");
 
 
 
-// // Creamos la clase que se utilizara para generar una tarea.
-// class Tarea{
-//     constructor(nombreTarea){
-//         this.nombre = nombreTarea;
-//     }
-// }
-
-
-// // Definimos el array que contendra las tareas.
-// let arrayDeTareas = [];
+// Funcion para actualizar el titulo de la lista de tareas
+function actualizarTituloLista(){
+    // Actualizamos nuevamente el valor del elemento de la lista de tareas.
+    let listaTareas = document.getElementById("listaTareas");
+    // validamos si la lista de tareas tiene tareas añadidas
+    if( listaTareas.childElementCount == 1 ){ tituloDeListaTareas.innerText = "Sin Tareas" }
+};
+actualizarTituloLista();
 
 
 
-// Contador de control de ids
-let contador = 0;
+// Funcion para agregar una nueva tarea
+function agregar(){
+
+    // Actualizamos el titulo de la lista de tareas
+    tituloDeListaTareas.innerText = "Tareas Actuales";
+
+
+    if(inputTarea.value){
+
+        // Se crean los elementos HTML que componen la nueva tarea
+        let cajaDeNuevaTarea = document.createElement('div');
+        let contenedorBotones = document.createElement('div');
+        let spanTarea = document.createElement('span');
+        let spanCompleto = document.createElement('span');
+        let spanEliminar = document.createElement('span');
+        let botonCompleto = document.createElement('button');
+        let botonEliminar = document.createElement('button');
+
+        // Se añaden las clases a los elementos HTML
+        cajaDeNuevaTarea.classList.add("flex", "items-center", "justify-between", "gap-2", "bg-white/25", "rounded", "pr-2", "min-w-[50%]");
+        contenedorBotones.classList.add("flex", "gap-2");
+        spanTarea.classList.add("text-[#023030]", "font-bold", "text-[1.5rem]", "px-2", "py-1");
+        spanCompleto.classList.add("material-symbols-outlined");
+        spanEliminar.classList.add("material-symbols-outlined");
+        botonCompleto.classList.add("flex", "items-center", "bg-white/75", "rounded", "text-[#023030]", "font-bold", "text-lg", "px-2", "py-1", "hover:bg-white/90");
+        botonEliminar.classList.add("flex", "items-center", "bg-white/75", "rounded", "text-[#023030]", "font-bold", "text-lg", "px-2", "py-1", "hover:bg-white/90");
+
+        // Se añade el contenido a los elementos HTML
+        spanTarea.innerText = inputTarea.value;
+        spanCompleto.innerText = "done";
+        spanEliminar.innerText = "delete";
+
+        // Se estructuran los elementos HTML en el orden adecuado
+        botonCompleto.appendChild(spanCompleto);
+        botonEliminar.appendChild(spanEliminar);
+        contenedorBotones.appendChild(botonCompleto);
+        contenedorBotones.appendChild(botonEliminar);
+
+        // Una vez los elementos estan definidor se añaden al contenedor 
+        cajaDeNuevaTarea.appendChild(spanTarea);
+        cajaDeNuevaTarea.appendChild(contenedorBotones);
+        
+        // Se agrega la tarea al contenedor en el HTML
+        listaTareas.appendChild(cajaDeNuevaTarea);
+        inputTarea.value = "";
+
+        // Evento para el boton Completado
+        botonCompleto.addEventListener("click", ()=>{
+            spanTarea.classList.add("line-through");
+        });
+
+        // Evento para eliminar una tarea (nodo)
+        botonEliminar.addEventListener("click", ()=>{
+            cajaDeNuevaTarea.remove();
+            actualizarTituloLista();
+        });
+    }
+}
 
 
 // Agregamos el evento al boton de agregar tarea.
-botonAgregar.addEventListener("click", ()=>{
+botonAgregar.addEventListener("click", agregar);
 
-    // Incrementamos el contador de control de ids
-    contador++;
-
-    if(inputTarea.value){
-        let nuevaTarea = document.createElement('div');
-        nuevaTarea.innerHTML = `
-            <div id="tarea-${contador}" class="flex items-center justify-between gap-2 bg-white/25 rounded pr-2 min-w-[50%]">
-                <span id="nombreTarea-${contador}" class="text-[#023030] font-bold text-[1.5rem] px-2 py-1">${inputTarea.value}</span> 
-                <div class="flex gap-2">
-                    <button id="completado-${contador}" class="flex items-center bg-white/75 rounded text-[#023030] font-bold text-lg px-2 py-1 hover:bg-white/90">
-                        <span class="material-symbols-outlined">
-                        done
-                        </span>
-                    </button>
-                    <button id="eliminar-${contador}" class="flex items-center bg-white/75 rounded text-[#023030] font-bold text-lg px-2 py-1 hover:bg-white/90">
-                        <span class="material-symbols-outlined">
-                            delete
-                        </span>
-                    </button>
-                </div>
-            </div>`;
-        listaTareas.appendChild(nuevaTarea);
-        inputTarea.value = "";
-
-
-        // Seleccionamos los botones usando una palabra estatica y concatenando un id dinamico.
-        let botonCompletado = document.getElementById(`completado-${contador}`);
-        let botonEliminar = document.getElementById(`eliminar-${contador}`);
-        
-        
-        // Agregar eventos a los botones de Accion
-        botonCompletado.addEventListener("click", ()=>{
-            object.classList.add("line-through");
-        });
-        
-        // Evento para eliminar una tarea (nodo)
-        botonEliminar.addEventListener("click", ()=>{
-            nuevaTarea.remove();
-        });
-    
-    }
-    
-});
