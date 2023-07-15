@@ -146,3 +146,115 @@ function iterarArray(array, miCallback){
 
 // Invocacion de la funcion iterarArray y envio de los parametros, el array(personas) y el callback (la funcion saludarPersona).
 iterarArray(personas, saludarPersona);
+
+
+
+
+
+
+
+
+/*** EJEMPLO 4 ***/
+// Elabora una funcion permita añadir elementos a un carrito mediante llamado de callbacks recursivos utilizando funciones asincronas.
+
+let carrito = "Carrito: 🛒";
+"📦";
+console.log(carrito);
+
+
+// Funcion que agrega un producto al carrito tras 2 segundos y ejecuta un callback.
+function agregarProducto(parametroCallback){
+    // setTimeout en esta ocasion va a esperar que transcurran 2 segundos para ejecutar su logica interna.
+    setTimeout(()=>{
+        // Se añade el producto al carrito
+        carrito += "📦";
+        
+        // Se ejecuta el callback
+        parametroCallback();
+    },2000) // 2000 representa el tiempo en milisegundos, 2000 = 2 segundos.
+};
+
+
+
+agregarProducto(
+    ()=>{
+        console.log(carrito);
+        agregarProducto(
+            ()=>{
+                console.log(carrito);
+                agregarProducto(
+                    ()=>{
+                        console.log(carrito);
+                        agregarProducto(
+                            ()=>{
+                                console.log(carrito);
+                                agregarProducto(
+                                    ()=>{
+                                        console.log(carrito);
+                                        agregarProducto(
+                                            ()=>{
+                                                console.log(carrito);
+                                                agregarProducto(
+                                                    ()=>{
+                                                        console.log(carrito);
+                                                        agregarProducto(
+                                                            ()=>{
+                                                                console.log(carrito);
+                                                                agregarProducto(
+                                                                    ()=>{
+                                                                        console.log(carrito);
+                                                                    }
+                                                                )
+                                                            }
+                                                        )
+                                                    }
+                                                )
+                                            }
+                                        )
+                                    }
+                                )
+                            }
+                        )
+                    }
+                )
+            }
+        )
+    }
+)
+
+
+
+
+
+
+/*
+    Hay varias razones por las que los callbacks pueden ser difíciles de entender:
+
+    Conceptualización: Los callbacks son un concepto abstracto y pueden ser difíciles 
+    de comprender para aquellos que están empezando en programación, incluso para los
+    programadores con experiencia, toma algo de tiempo y practica dominarlos.
+
+
+    Naturaleza asíncrona: Los callbacks son un mecanismo para controlar la asincronía, 
+    lo cual puede ser un tema un poco desafiante para algunos programadores.
+
+
+    Complejidad: A veces, los callbacks pueden ser parte de código complejo y anidado, lo que puede hacer 
+    que sea difícil entender qué está sucediendo.
+
+
+    Ausencia de una estructura definida: Los callbacks no siguen una estructura definida como, por ejemplo, 
+    las funciones o los bucles, por lo que a veces pueden ser difíciles de seguir y rastrear.
+
+
+    Sin embargo, con práctica y estudio, los callbacks pueden ser una herramienta muy útil tanto en JavaScript
+    commo en otros lenguajes de programación. 
+    
+    NOTA: Es importante practicar con ejemplos y código propio para comprender realmente cómo funcionan.
+
+    Te invito a que crees tus propios ejercicios y trates de escribir codigo conforme tu nivel de conocimiento
+    lo permita, es normal si las primeras veces no obtienes el resultado deseado y sientes frustracion,
+    pero no te rindas por eso, con el tiempo comenzaras a ver como poco a poco el concepto de callback 
+    se vuelve parte de tu experiencia.
+
+*/
