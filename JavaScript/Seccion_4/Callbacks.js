@@ -176,51 +176,51 @@ function agregarProducto(parametroCallback){
 
 
 
-agregarProducto(
-    ()=>{
-        console.log(carrito);
-        agregarProducto(
-            ()=>{
-                console.log(carrito);
-                agregarProducto(
-                    ()=>{
-                        console.log(carrito);
-                        agregarProducto(
-                            ()=>{
-                                console.log(carrito);
-                                agregarProducto(
-                                    ()=>{
-                                        console.log(carrito);
-                                        agregarProducto(
-                                            ()=>{
-                                                console.log(carrito);
-                                                agregarProducto(
-                                                    ()=>{
-                                                        console.log(carrito);
-                                                        agregarProducto(
-                                                            ()=>{
-                                                                console.log(carrito);
-                                                                agregarProducto(
-                                                                    ()=>{
-                                                                        console.log(carrito);
-                                                                    }
-                                                                )
-                                                            }
-                                                        )
-                                                    }
-                                                )
-                                            }
-                                        )
-                                    }
-                                )
-                            }
-                        )
-                    }
-                )
-            }
-        )
-    }
-)
+// agregarProducto(
+//     ()=>{
+//         console.log(carrito);
+//         agregarProducto(
+//             ()=>{
+//                 console.log(carrito);
+//                 agregarProducto(
+//                     ()=>{
+//                         console.log(carrito);
+//                         agregarProducto(
+//                             ()=>{
+//                                 console.log(carrito);
+//                                 agregarProducto(
+//                                     ()=>{
+//                                         console.log(carrito);
+//                                         agregarProducto(
+//                                             ()=>{
+//                                                 console.log(carrito);
+//                                                 agregarProducto(
+//                                                     ()=>{
+//                                                         console.log(carrito);
+//                                                         agregarProducto(
+//                                                             ()=>{
+//                                                                 console.log(carrito);
+//                                                                 agregarProducto(
+//                                                                     ()=>{
+//                                                                         console.log(carrito);
+//                                                                     }
+//                                                                 )
+//                                                             }
+//                                                         )
+//                                                     }
+//                                                 )
+//                                             }
+//                                         )
+//                                     }
+//                                 )
+//                             }
+//                         )
+//                     }
+//                 )
+//             }
+//         )
+//     }
+// )
 
 
 
