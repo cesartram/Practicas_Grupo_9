@@ -60,9 +60,11 @@ const respuestaServidor = {
         id: 1,
         nombre: "Diego",
         apellido: "Rodriguez",
-        edad: 27
+        edad: 27,
+        imagen: "https://avatars.githubusercontent.com/u/101908524?v=4"
     }
 };
+
 
 let datosRecibidos;
 
@@ -91,7 +93,9 @@ obtenerDatos
             let parrafo2 = document.getElementById("parrafo2");
             let parrafo3 = document.getElementById("parrafo3");
             let parrafo4 = document.getElementById("parrafo4");
+            let imagen1 = document.getElementById("imagen1");
 
+            imagen1.src = datosRecibidos.imagen;
             parrafo1.innerText = `ID: ${datosRecibidos.id}`;
             parrafo2.innerText = `Nombre: ${datosRecibidos.nombre}`;
             parrafo3.innerText = `Apellido: ${datosRecibidos.apellido}`;
@@ -101,7 +105,8 @@ obtenerDatos
 
     .catch(
         error => {
-            console.log(`Ups, ocurrio el error: ${error}`);
+            console.error(`Ups, ocurrio el error:`);
+            console.error(error);
         }
     );
 
@@ -141,7 +146,9 @@ obtenerDatos2
             let parrafo2 = document.getElementById("parrafo2.2");
             let parrafo3 = document.getElementById("parrafo3.2");
             let parrafo4 = document.getElementById("parrafo4.2");
+            let imagen1 = document.getElementById("imagen2");
 
+            imagen1.src = datosRecibidos.imagen;
             parrafo1.innerText = `ID: ${datosRecibidos.id}`;
             parrafo2.innerText = `Nombre: ${datosRecibidos.nombre}`;
             parrafo3.innerText = `Apellido: ${datosRecibidos.apellido}`;
@@ -151,6 +158,7 @@ obtenerDatos2
 
     .catch(
         error => {
-            console.log(`Ups, ocurrio el error: ${error}`);
+            console.error(`Ups, ocurrio el error:`);
+            console.error(error);
         }
     );
