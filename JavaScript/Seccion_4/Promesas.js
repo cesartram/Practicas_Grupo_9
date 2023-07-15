@@ -54,7 +54,7 @@
 
 // Ejemplo 1 (Promesa no asincrona que evalua igualdad de tipo de datos y retorna una respuesta).
 
-let respuestaServidor = {
+const respuestaServidor = {
     status: 200,
     contenido:{
         id: 1,
@@ -64,6 +64,10 @@ let respuestaServidor = {
     }
 };
 
+let datosRecibidos;
+
+
+// 
 const obtenerDatos = new Promise( (cumplido, fallado)=>{
     if( respuestaServidor.status === 200 ){
         cumplido( respuestaServidor.contenido );
@@ -78,7 +82,22 @@ obtenerDatos
     .then( data => {
         console.log(`Se recibio el siguiente objeto:`);
         console.log(data);
+        datosRecibidos = data;
     })
+
+    .then(
+        ()=>{
+            let parrafo1 = document.getElementById("parrafo1");
+            let parrafo2 = document.getElementById("parrafo2");
+            let parrafo3 = document.getElementById("parrafo3");
+            let parrafo4 = document.getElementById("parrafo4");
+
+            parrafo1.innerText = `ID: ${datosRecibidos.id}`;
+            parrafo2.innerText = `Nombre: ${datosRecibidos.nombre}`;
+            parrafo3.innerText = `Apellido: ${datosRecibidos.apellido}`;
+            parrafo4.innerText = `Edad: ${datosRecibidos.edad}`;
+        }
+    )
 
     .catch(
         error => {
@@ -87,4 +106,51 @@ obtenerDatos
     );
 
 
-let datosRecibidos;
+
+
+// Ejemplo 2 (Promesa asincronica, usando setTimeout()).
+// Es la misma promesa del ejemplo anterior solo que se ejecuta asincronicamente.
+
+
+let datosRecibidos2;
+
+
+// Se define la promesa y se usa setTimeout para emular el retraso que tiene normalmente un servidor.
+const obtenerDatos2 = new Promise( (cumplido, fallado)=>{
+    setTimeout( ()=>{
+        if( respuestaServidor.status === 200 ){
+            cumplido( respuestaServidor.contenido );
+        }else{
+            fallado("Se rechazo la promesa, ocurrio algun error que no se esperaba.");
+        }
+    },10000)
+});
+
+
+
+obtenerDatos2
+    .then( data => {
+        console.log(`Alfin! gracias a Dios se recibio el siguiente objeto despues de 10 segundos:`);
+        console.log(data);
+        datosRecibidos = data;
+    })
+
+    .then(
+        ()=>{
+            let parrafo1 = document.getElementById("parrafo1.2");
+            let parrafo2 = document.getElementById("parrafo2.2");
+            let parrafo3 = document.getElementById("parrafo3.2");
+            let parrafo4 = document.getElementById("parrafo4.2");
+
+            parrafo1.innerText = `ID: ${datosRecibidos.id}`;
+            parrafo2.innerText = `Nombre: ${datosRecibidos.nombre}`;
+            parrafo3.innerText = `Apellido: ${datosRecibidos.apellido}`;
+            parrafo4.innerText = `Edad: ${datosRecibidos.edad}`;
+        }
+    )
+
+    .catch(
+        error => {
+            console.log(`Ups, ocurrio el error: ${error}`);
+        }
+    );
