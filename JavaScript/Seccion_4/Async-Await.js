@@ -135,7 +135,13 @@ async function buscarDatos(){
                 imagen.classList.add("rounded", "w-[250px]");
                 nuevoParrafo1.classList.add("font-semibold");
                 nuevoParrafo2.classList.add("font-semibold");
-                nuevoParrafo3.classList.add("font-semibold");
+
+                // El estilo de este parrafo no se añade con tailwind, sino mediante CSS de propiedad.
+                // Ejemplo:  <p style="font-weight: 600;">Genesis</p>
+                nuevoParrafo3.style.fontWeight = "600";
+
+
+                document.body.style.backgroundColor = "pink";
 
                 // Añadimos el nuevo div que ahora contiene los elementos (img, p, p, p).
                 // al section con el id "contenerDatos". 
