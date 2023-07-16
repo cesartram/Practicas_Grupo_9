@@ -94,12 +94,50 @@ function obtenerDatos(){
 async function buscarDatos(){
     const datosRecibidos = await obtenerDatos();
     try{
-        console.table(datosRecibidos);
-        console.log(datosRecibidos);
-        console.log(datosRecibidos[0].nombre);
-        console.log(datosRecibidos[0].apellido);
-        console.log(datosRecibidos[0].genero);
-        console.log(datosRecibidos[0].imagen);
+        // console.table(datosRecibidos);
+        // console.log(datosRecibidos);
+        // console.log(datosRecibidos[0].nombre);
+        // console.log(datosRecibidos[0].apellido);
+        // console.log(datosRecibidos[0].genero);
+        // console.log(datosRecibidos[0].imagen);
+
+        let contenedorDatos = document.getElementById("contenedorDatos");
+
+        datosRecibidos.map(
+            (indiceObtenido)=>{
+                // Creamos un nuevo div, el cual cargaremos con los pararfos y la imagen
+                // que se llenaran con los datos obtenidos del servidor.
+                let nuevoDiv = document.createElement("div");
+
+                // Creamos los parrafos y la imagen que se añadiran al div recien creado.
+                let nuevoParrafo1 = document.createElement("p");
+                let nuevoParrafo2 = document.createElement("p");
+                let nuevoParrafo3 = document.createElement("p");
+                let imagen = document.createElement("img");
+
+
+                // Cargamos los elementos que acabamos de crear.
+                nuevoParrafo1.innerText = indiceObtenido.nombre;
+                nuevoParrafo2.innerText = indiceObtenido.apellido;
+                nuevoParrafo3.innerText = indiceObtenido.genero;
+                imagen.src = indiceObtenido.imagen;
+
+
+                // Agregamos los elementos ya con contenido asignado al div.
+                nuevoDiv.appendChild(imagen);
+                nuevoDiv.appendChild(nuevoParrafo1);
+                nuevoDiv.appendChild(nuevoParrafo2);
+                nuevoDiv.appendChild(nuevoParrafo3);
+
+
+                // Añadimos el nuevo div que ahora contiene los elementos (img, p, p, p).
+                // al section con el id "contenerDatos". 
+                contenedorDatos.appendChild(nuevoDiv);
+            }
+        )
+
+
+
     }catch(error){
         console.error(`Ups, ocurrio el error:`);
         console.error(error);
