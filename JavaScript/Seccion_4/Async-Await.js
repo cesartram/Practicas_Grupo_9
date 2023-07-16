@@ -94,6 +94,8 @@ function obtenerDatos(){
 async function buscarDatos(){
     const datosRecibidos = await obtenerDatos();
     try{
+
+        // Aqui podemos mostrar los datos del indice 0 del array obtenido, en consola.
         // console.table(datosRecibidos);
         // console.log(datosRecibidos);
         // console.log(datosRecibidos[0].nombre);
