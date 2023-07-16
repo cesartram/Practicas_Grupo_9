@@ -20,7 +20,7 @@
 
 
 
-const buscar = fetch("https://rickandmortyapi.com/api/character/1");
+const buscar = fetch("https://rickandmortyapi.com/api/character/2");
 
 // Esta variable la vamos a cargar cuando se obtengan los datos, es decir, cuando se resuelva la promesa.
 let datosObtenidos;
@@ -44,7 +44,7 @@ try{
             (respuestaEnJson)=>{
                 let parrafoNombre = document.getElementById("nombre");
                 let parrafoStatus = document.getElementById("status");
-                let parrafoEspecie = document.getElementById("Especie");
+                let parrafoEspecie = document.getElementById("especie");
                 let parrafoGenero = document.getElementById("genero");
                 let parrafoLocalizacion = document.getElementById("localizacion");
                 let imagenPersonaje = document.getElementById("imagen");
