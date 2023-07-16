@@ -31,19 +31,34 @@ try{
     buscar
         .then(
             (respuesta)=>{
+                console.log("Respuesta cruda de la API")
                 // Mostramos lo que recibimos antes de convertir el json a objeto.
                 console.log(respuesta);
 
-                // Convertimos el json a objeto.
+                // Convertimos el json a objeto con la funcion .json().
                 return respuesta.json();
             }
         )
 
         .then(
-            (respuesta)=>{
+            (respuestaEnJson)=>{
+                let parrafoNombre = document.getElementById("nombre");
+                let parrafoStatus = document.getElementById("status");
+                let parrafoEspecie = document.getElementById("Especie");
+                let parrafoGenero = document.getElementById("genero");
+                let parrafoLocalizacion = document.getElementById("localizacion");
+                let imagenPersonaje = document.getElementById("imagen");
+
+                parrafoNombre.innerText = `Nombre: ${respuestaEnJson.name}`;
+                parrafoStatus.innerText = `Status: ${respuestaEnJson.status}`;
+                parrafoEspecie.innerText = `Especie: ${respuestaEnJson.species}`;
+                parrafoGenero.innerText = `Genero: ${respuestaEnJson.gender}`;
+                parrafoLocalizacion.innerText = `Localizacion: ${respuestaEnJson.location.name}`;
+                imagenPersonaje.src = respuestaEnJson.image;
+
                 console.log("Esto es el JSON recibido luego de ser transformado a objeto:");
                 // Se muestra la respuesta ya convertida a objeto.
-                console.log(respuesta);
+                console.log(respuestaEnJson);
             }
         )
 
@@ -59,3 +74,7 @@ try{
     console.log("Se rechazo la promesa, ocurrio algun error que no se esperaba.");
     console.log(error);
 }
+
+
+
+
