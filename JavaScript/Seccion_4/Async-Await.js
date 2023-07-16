@@ -117,9 +117,9 @@ async function buscarDatos(){
 
 
                 // Cargamos los elementos que acabamos de crear.
-                nuevoParrafo1.innerText = indiceObtenido.nombre;
-                nuevoParrafo2.innerText = indiceObtenido.apellido;
-                nuevoParrafo3.innerText = indiceObtenido.genero;
+                nuevoParrafo1.innerText = `Nombre: ${indiceObtenido.nombre}`;
+                nuevoParrafo2.innerText = `Apellido: ${indiceObtenido.apellido}`;
+                nuevoParrafo3.innerText = `Genero: ${indiceObtenido.genero}`;
                 imagen.src = indiceObtenido.imagen;
 
 
@@ -129,6 +129,13 @@ async function buscarDatos(){
                 nuevoDiv.appendChild(nuevoParrafo2);
                 nuevoDiv.appendChild(nuevoParrafo3);
 
+
+                // Damos estilos a cada elemento por igual.
+                nuevoDiv.classList.add("flex", "flex-col", "items-center", "col-span-1");
+                imagen.classList.add("rounded", "w-[250px]");
+                nuevoParrafo1.classList.add("font-semibold");
+                nuevoParrafo2.classList.add("font-semibold");
+                nuevoParrafo3.classList.add("font-semibold");
 
                 // Añadimos el nuevo div que ahora contiene los elementos (img, p, p, p).
                 // al section con el id "contenerDatos". 
