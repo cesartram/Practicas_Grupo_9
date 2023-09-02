@@ -1,0 +1,130 @@
+Cliente: Haonter inc
+
+Descripcion: Haonter Inc es una empresa de venta minorista que se dedica a la comercialización de fragancias. 
+Actualmente, desea desarrollar una página web ecommerce para ampliar su alcance y vender sus productos en línea. 
+
+El cliente tiene una idea general de lo que quiere, pero necesita ayuda para definir los detalles y los requisitos específicos de la página web.
+
+
+Preguntas:
+
+¿Cual es el pais de origen de la empresa?
+- Estamos ubicados en Buenos Aires, Argentina.
+
+¿A que publico y/o genero va dirigido la web?
+- Va dirigido a todo publico de edad madura.
+
+¿Que impacto esperas generar en los potenciales clientes?
+- Se busca transmitir la sensacion de confort, salud y exclusividad.
+
+¿Como manejan la publicidad actualmente?
+- Publicamos en los estados de WhatsApp.
+
+¿En que paises se enfoca la publicidad actualmente?
+- El alcance actual es nacional, sin embargo, tenemos clientes en otros paises.
+
+¿Tienes un local físico o sólo una tienda Online?
+- Tenemos una planta principal en Buenos Aires, 1 en Bogota, 1 en CDMX, 1 en Santiago y 17 locales fisicos repartidos en 12 paises.
+
+¿Existe actualmente alguna otra empresa que ofrezca algo similar a lo que desean alcanzar?
+- Si, hay un competidor nuevo que esta creciendo muy rapido.
+
+¿Cual es el nombre de la competencia?
+- Nuestros competidores se llaman factoria de colonias y estan ubicados en Maracaibo, Venezuela.
+
+¿Que resaltarian de los productos que ofrecen con relacion a la competencia?
+- Nuestros productos no contaminan el ambiente, son realizados con energia verde, no son cancerígenos, son accesibles a todo el publico, utilizamos algunos ingredientes de origen natural.
+
+¿Tienen algun referente visual para su pagina web?
+- Si, Aliexpress.
+
+¿Que linea de productos tienen?
+- Tenemos 3 lineas, se dividen en Splash, Colonias y Perfumes.
+
+¿Existen plazos o fechas límite específicas que deban tenerse en cuenta?
+- Nos gustaria que estuviera disponible en no mas de 3 meses.
+
+¿Tienen alguna paleta de colores contemplada?
+- No, tampoco sabemos mucho sobre el tema.
+
+¿Tienen definida la identidad de la empresa, entre ello el logotipo, slogan, etc...?
+- Si, pero buscamos una renovacion.
+
+¿Cuentan con un diseñador o requieren uno?
+- No, realmente no contamos con nadie que lo realice.
+
+¿Desea que nuestro equipo realice adicionalmente la renovacion de la identidad de la empresa?
+- Si!, seria lo ideal.
+
+¿Cuál es el presupuesto asignado para el proyecto?
+- Hasta el momento se ha designado 1500$.
+
+¿Necesita servicios de redacción o traducción para el contenido?
+- No, se espera que el equipo de desarrollo elabore el contenido.
+
+¿Que metodos de pago manejaria la web?
+- Debe manejar TDC, Transferencias bancarias (Bancos latinoamericanos) con pasarela encriptada, Binance, Paypal, Zelle.
+
+¿Cuentan con dominio y hosting?
+- En realidad no, nuestro equipo no esta especializado en el tema, por ende no contamos con un dominio ni hosting.
+
+(Se le explica que es un dominio)
+¿Que dominio desean elegir (Si esta disponible)?
+- Nos gustaria algo como fraganciashaonter.store
+
+¿Hay restricciones legales sobre el uso de algunos ingredientes?
+- No, como comente hace poco, nuestros productos son amigables, LEGALES, y una parte son naturales.
+
+
+¿Que tecnologia espera para el web site?
+- Bueno, no se que diferencia exista entre las tecnologias pero nos han dicho que algo llamado wordpres es economico, rapido y muy seguro.
+
+¿Se maneja roles?
+- Si, deben existir 2 roles, usuario y administrador.
+
+¿Que paginas contempla el sitio?
+- home, login, register, recovery, about, carrito, productos, panel inicio, añadir, editar, eliminar.
+
+
+Se finaliza la reunion y luego de 2 dias llega la cotización...
+
+
+Eduardo: 1000$
+Semiramis: 900$
+Cesart: 1100$
+Luis: 699.99$
+Juan: 650$
+
+
+Cotizacion estimada: 7800$
+
+
+
+Servicios y Desarrollos:
+
+- Elaboracion de contenido grafico: 250$ 
+- Realizar IC: 500$
+- Realizar Diseño de Interfaz: 150$
+- Desarrollar Front End (Vistas): 950$
+- Configuracion de la BD: 50$
+- Desarrollo de API: 1200$
+- Trabajar en seguridad anti-SQLI: 50$
+- Aplicar Middlewares, WhiteList y Pasarelas de pago: 650$ 
+- Certificado SSL: 190$
+- Caracteristica Especial 1 (Login/Register): 200$
+- Caracteristica Especial 2 (Carrito): 250$
+- Caracteristica Especial 3 (CRUD Productos): 500$
+- Caracteristica Especial 4 (Envio de Newsletter): 80$
+- Resumen de información (Mejora de redacción y Traduccion): 100$
+- Realizar SEO: 100$
+- Manejo de roles: 130$
+- Definir campaña publicitaria en G-Business, Instragram y Facebook: 800$ - 1500$
+- Configuración de correos empresariales c/10: 35$  
+- Aplicar Optimizacion Web (Minificacion, formatos, tamaños, cache): 90$
+- Compra de Dominio y Hosting: 50$ - 70$
+- Configurar un dominio: 10$
+- Configuracion del servidor / Deploy: 35$
+
+Total real: 6675 + 19% (IVA) = 7943.25$
+
+

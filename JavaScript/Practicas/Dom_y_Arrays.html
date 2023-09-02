@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+        <title>Dom y Arrays</title>
+    </head>
+    <body class="bg-[url('./Imagenes/rainbow-vortex.png')] flex flex-col items-center">
+        <h1 class="text-5xl font-bold text-white mt-12">Dom y Arrays</h1>
+
+        <section class="flex flex-col gap-2 items-center mt-32">
+            <!-- nombre -->
+            <label class="text-white font-bold text-xl" for="nombre">Nombre</label>
+            <input type="text" class="border border-stone-900 rounded w-[50vw] py-2 pl-2 focus:outline-none focus:border-sky-500" id="nombre" name="nombre">
+            <label class="text-white font-bold text-xl" for="nombre2">Segundo Nombre</label>
+            <input type="text" class="border border-stone-900 rounded w-[50vw] py-2 pl-2 focus:outline-none focus:border-sky-500" id="nombre2" name="nombre2">
+            <!-- apellido -->
+            <label class="text-white font-bold text-xl" for="apellido">Apellido</label>
+            <input type="text" class="border border-stone-900 rounded w-[50vw] py-2 pl-2 focus:outline-none focus:border-sky-500" id="apellido" name="apellido">
+            <label class="text-white font-bold text-xl" for="apellido2">Segundo Apellido</label>
+            <input type="text" class="border border-stone-900 rounded w-[50vw] py-2 pl-2 focus:outline-none focus:border-sky-500" id="apellido2" name="apellido2">
+            <!-- botones -->
+            <button id="botoncito" class="text-white bg-[#151F30]/90 rounded-lg px-4 py-2 hover:bg-[#225a98]">Agregar</button>
+            <button id="botoncito2" class="text-white bg-[#151F30]/90 rounded-lg px-4 py-2 hover:bg-[#225a98]">Mostrar registros</button>
+        </section>
+        
+        <section id="lista" class="mt-20 flex flex-col gap-2 items-center w-[60%] bg-white/5 rounded-lg mb-12">
+
+        </section>
+    </body>
+    <script src="./Dom_y_Arrays.js"></script>
+</html>
