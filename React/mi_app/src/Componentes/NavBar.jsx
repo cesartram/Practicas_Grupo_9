@@ -57,6 +57,7 @@ const NavBar = () => {
                 <NavLink style={cambiarEstilos} to="/">Inicio</NavLink>
                 <NavLink style={cambiarEstilos} to="/favoritos">Favoritos</NavLink>
                 <NavLink style={cambiarEstilos} to="/perfil">Perfil</NavLink>    
+                <NavLink style={cambiarEstilos} to="/hook-use_effect">useEffect</NavLink>    
             </div>
         </nav>
     );
