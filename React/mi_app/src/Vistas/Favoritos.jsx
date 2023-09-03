@@ -1,6 +1,6 @@
 const Favoritos = () => {
     return ( 
-        <main>
+        <main className="min-h-screen">
             <h1>Bienvenido Favoritos</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi doloremque fugiat optio. Quas neque id rem debitis! Fuga quod fugit qui ab consequatur labore iste corporis praesentium dolorem? Nostrum, ipsam.</p>
             <div>

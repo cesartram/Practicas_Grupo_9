@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // Importacion de Componentes
 import NavBar from './Componentes/NavBar';
+import Footer from './Componentes/Footer';
 
 
 // Importacion de Vistas
@@ -37,5 +38,8 @@ root.render(
       <Route path="/perfil" element={<Perfil/>} />
     
     </Routes>
+
+    <Footer/>
+
   </BrowserRouter>
 );
