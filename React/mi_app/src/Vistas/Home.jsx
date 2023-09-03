@@ -1,3 +1,5 @@
+import HookUseState2 from "../Hooks/HookUseState2";
+
 const Home = () => {
     return ( 
         <main className="min-h-screen">
@@ -8,8 +10,10 @@ const Home = () => {
                 <a href="http://instagram.com/didacusdev">Ver Instagram 1</a>
                 <a href="http://instagram.com/lexpinonline">Ver Instagram 2</a>
             </div>
+            <HookUseState2/>
         </main>
     );
 }
 
 export default Home;
+
