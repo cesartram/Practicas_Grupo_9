@@ -31,18 +31,19 @@ const HookUseEffect = () => {
     useEffect(
         function(){
             document.title = `Has pulsado ${contador} veces`;
-        },[contador]
+        },[contador] // Esto es un array de dependencias
     );
 
+    // Las dependencias permiten que se desenlace el efecto secundario.
 
+    function cambiar(){
+        setContador(contador + 1)
+    };
 
     return ( 
         <div>
             <p>Has pulsado: {contador} veces</p>
-            <button onClick={
-                    () => setContador(contador + 1)
-                } >Incrementar
-            </button>
+            <button onClick={cambiar}>Incrementar</button>
         </div>
     );
 }
