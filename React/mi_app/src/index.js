@@ -13,6 +13,7 @@ import Footer from './Componentes/Footer';
 import Home from './Vistas/Home';
 import Favoritos from './Vistas/Favoritos';
 import Perfil from './Vistas/Perfil';
+import ContadorUseEffect from './Vistas/ContadorUseEffect';
 
 // Seleccionamos el elemento del DOM donde se renderizara nuestra APP
 const root = ReactDOM.createRoot(document.getElementById('raiz'));
@@ -36,6 +37,7 @@ root.render(
       <Route path="/" element={<Home/>} />
       <Route path="/favoritos" element={<Favoritos/>} />
       <Route path="/perfil" element={<Perfil/>} />
+      <Route path="/hook-use_effect" element={<ContadorUseEffect/>} />
     
     </Routes>
 

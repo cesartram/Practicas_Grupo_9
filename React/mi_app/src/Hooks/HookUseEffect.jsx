@@ -21,7 +21,7 @@
     efecto secundario se ejecutará nuevamente.
 */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const HookUseEffect = () => {
 
@@ -30,7 +30,11 @@ const HookUseEffect = () => {
     //Se modifica el titulo del sitio con la funcion de efecto secundario useEffect()
     useEffect(
         function(){
-            document.title = `Has pulsado ${contador} veces`;
+            // Este setTimeout no es necesario pero se coloca en este ejemplo para emular un proceso asincrono
+            // que comunmente se ejecuta en segundo plano como un reloj o un llamado a una API.
+            setTimeout(function(){
+                document.title = `Has pulsado ${contador} veces`;
+            },2500);
         },[contador] // Esto es un array de dependencias
     );
 
