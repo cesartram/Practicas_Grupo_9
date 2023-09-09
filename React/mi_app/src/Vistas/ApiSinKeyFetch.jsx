@@ -4,8 +4,7 @@ const ApiSinKeyFetch = () => {
 
     // Creamos una variable de estado que se cargara con los datos de los personajes que
     // se reciban de la API.
-    const [personajes, setPersonajes] = useState([]);
-
+    const [personajes, setPersonajes] = useState(["vacio por ahora"]);
 
 
     // Creamos el efecto secundario (asincrono) el cual ejecutara una busqueda en la API y cargara
@@ -13,14 +12,13 @@ const ApiSinKeyFetch = () => {
     // sino, mostrara un mensaje de error.
     useEffect(() => {
         // Funcion nativa de JavaScript para realizar peticiones HTTP
-        fetch('https://rickandmortyapi.com/api/character')
+        fetch(`https://rickandmortyapi.com/api/character/`)
             .then((respuesta) => { return respuesta.json() })
             .then((respuesta) => { 
                 setPersonajes(respuesta.results); 
             })
             .catch((error) => { console.log(error) });
-    },[])
-
+    },[]);
 
 
     // Solo para asegurarnos de que los datos se recibieron correctamente
