@@ -15,6 +15,10 @@ import Favoritos from './Vistas/Favoritos';
 import Perfil from './Vistas/Perfil';
 import ContadorUseEffect from './Vistas/ContadorUseEffect';
 import ApiSinKeyFetch from './Vistas/ApiSinKeyFetch';
+import ApiSinKeyAxios from './Vistas/ApiSinKeyAxios';
+
+
+
 
 // Seleccionamos el elemento del DOM donde se renderizara nuestra APP
 const root = ReactDOM.createRoot(document.getElementById('raiz'));
@@ -40,6 +44,7 @@ root.render(
       <Route path="/perfil" element={<Perfil/>} />
       <Route path="/hook-use_effect" element={<ContadorUseEffect/>} />
       <Route path="/apisinkeyfetch" element={<ApiSinKeyFetch/>} />
+      <Route path="/apisinkeyaxios" element={<ApiSinKeyAxios/>} />
     
     </Routes>
 
