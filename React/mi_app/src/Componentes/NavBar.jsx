@@ -59,6 +59,7 @@ const NavBar = () => {
                 <NavLink style={cambiarEstilos} to="/perfil">Perfil</NavLink>    
                 <NavLink style={cambiarEstilos} to="/hook-use_effect">useEffect</NavLink>    
                 <NavLink style={cambiarEstilos} to="/apisinkeyfetch">API SKF</NavLink>    
+                <NavLink style={cambiarEstilos} to="/apisinkeyaxios">API SKA</NavLink>    
             </div>
         </nav>
     );
