@@ -20,7 +20,7 @@ const NavBar = () => {
     // Estos son los estilos de todos los elementos menos de las Anclas (NavLink)
     const estilos = {
         navbar: "flex justify-between items-center w-full h-16 bg-slate-600 text-white px-8",
-        contenedor: "flex justify-between w-[300px]",
+        contenedor: "flex justify-between w-[500px]",
         imagen: "w-[150px]",
         input: "bg-slate-200 font-semibold px-4 py-2 rounded-full w-[450px] pl-4 text-black placeholder:text-gray-400",
         ancla: "text-black font-bold bg-slate-200 px-4 py-2 rounded-md hover:bg-slate-400 hover:text-white",
@@ -57,6 +57,8 @@ const NavBar = () => {
                 <NavLink style={cambiarEstilos} to="/">Inicio</NavLink>
                 <NavLink style={cambiarEstilos} to="/favoritos">Favoritos</NavLink>
                 <NavLink style={cambiarEstilos} to="/perfil">Perfil</NavLink>    
+                <NavLink style={cambiarEstilos} to="/hook-use_effect">useEffect</NavLink>    
+                <NavLink style={cambiarEstilos} to="/apisinkeyfetch">API SKF</NavLink>    
             </div>
         </nav>
     );
